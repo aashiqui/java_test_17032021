@@ -8,7 +8,7 @@ Deploy the generated war to the external tomcat server
 
 ## API
 
-http://localhost:8080/api/post-data
+http://ip:port/java-test/api/post-data
 
 ### Reuqest:
 {"bankDetails":"HSBC Canada,5601-2345-3446-5678,Nov-2017\nHSBC Canada,5601-2345-3446-5678,Nov-2017"}
