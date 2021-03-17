@@ -56,7 +56,12 @@ public class Utility {
 	
 	 public static File convertMultiPartToFile(MultipartFile file ) throws IOException
 	    {
-	        File convFile = new File( file.getOriginalFilename() );
+		 
+	        File convFile = new File( "/opt/tomcat/"+file.getOriginalFilename() );
+	        convFile.getParentFile().mkdirs(); // correct!
+			if (!convFile.exists()) {
+				convFile.createNewFile();
+			}
 	        FileOutputStream fos = new FileOutputStream( convFile );
 	        fos.write( file.getBytes() );
 	        fos.close();
